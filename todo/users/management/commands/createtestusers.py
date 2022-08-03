@@ -11,7 +11,7 @@ class Command(BaseCommand):
     help = 'Create test users from testusers.json'
 
     def handle(self, *args, **kwargs):
-        users=json.load(open(os.path.join(BASE_DIR,'json/testusers.json')))
+        users = json.load(open(os.path.join(BASE_DIR, 'json/testusers.json')))
         User = get_user_model()
         for user in users:
             if not User.objects.filter(username=user['username']).exists():
@@ -19,5 +19,6 @@ class Command(BaseCommand):
                     username=user['username'],
                     email=user['email'],
                     password=make_password(user['password']),
-                    is_superuser = user['is_superuser']
+                    is_staff=user['is_staff'],
+                    is_superuser=user['is_superuser']
                 )
