@@ -1,0 +1,30 @@
+[
+  {
+    "username": "user1",
+    "email": "user1@todo.test",
+    "password": "user1",
+    "is_staff": "True",
+    "is_superuser": "False"
+  },
+  {
+    "username": "user2",
+    "email": "user2@todo.test",
+    "password": "user2",
+    "is_staff": "True",
+    "is_superuser": "False"
+  },
+  {
+    "username": "user3",
+    "email": "user3@todo.test",
+    "password": "user3",
+    "is_staff": "True",
+    "is_superuser": "False"
+  },
+  {
+    "username": "super",
+    "email": "super@todo.test",
+    "password": "super",
+    "is_staff": "True",
+    "is_superuser": "True"
+  }
+]
