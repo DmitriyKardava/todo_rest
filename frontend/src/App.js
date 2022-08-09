@@ -1,7 +1,9 @@
 import './App.css';
 import React from "react";
-import UsersList from './components/User';
 import axios from 'axios';
+import UsersList from './components/User';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,8 +25,10 @@ componentDidMount(){
 
   render () {
     return (
-      <div>
+      <div class="container">
+        <Menu/>
         <UsersList users={this.state.users}/>
+        <Footer/>
       </div>
     )
   }
