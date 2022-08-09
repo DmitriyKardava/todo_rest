@@ -6,6 +6,7 @@ class TodoUserModelSerializer(HyperlinkedModelSerializer):
    class Meta:
        model = TodoUser
        fields = [
+        'id',
         'username', 
         'first_name', 
         'last_name', 
